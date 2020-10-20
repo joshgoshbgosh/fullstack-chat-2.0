@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Cookies from 'js-cookie';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

@@ -1,13 +1,10 @@
 from rest_framework import serializers
 
-from .models import Message
+from .models import Messaage
 
-class = MessageSerializer(serializers.ModelSerializer):
+class MessageSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
 
-
-
-
     class Meta:
-        model = Message
+        model = Messaage
         fields = ('id', 'content', 'user',)
