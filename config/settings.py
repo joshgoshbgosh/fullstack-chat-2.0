@@ -56,8 +56,20 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'accounts.apps.AccountsConfig',
     'frontend.apps.FrontendConfig',
+    'chat.apps.ChatConfig',
 
 ]
+
+REST_FRAMEWORK = {
+'DEFAULT_PERMISSION_CLASSES':[
+    'rest_framework.permissions.IsAuthenticated'
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
